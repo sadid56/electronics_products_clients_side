@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "brand_name": "Apple",
+      "thumbnail": "https://i.ibb.co/3mNnRNv/pexels-kartikey-das-413279.jpg"
+    },
+    {
+      "id": 2,
+      "brand_name": "Samsung",
+      "thumbnail": "https://i.ibb.co/LtQGDyM/pexels-obi-onyeador-13080838.jpg"
+    },
+    {
+      "id": 3,
+      "brand_name": "Sony",
+      "thumbnail": "https://i.ibb.co/6Fv49T4/pexels-rodrigo-santos-8544693.jpg"
+    },
+    {
+      "id": 4,
+      "brand_name": "Google",
+      "thumbnail": "https://i.ibb.co/txPgt5z/pexels-pixabay-40185.jpg"
+    },
+    {
+      "id": 5,
+      "brand_name": "Intel",
+      "thumbnail": "https://i.ibb.co/56mRjBx/pexels-jordan-harrison-343239.jpg"
+    },
+    {
+      "id": 6,
+      "brand_name": "Microsoft",
+      "thumbnail": "https://i.ibb.co/J5vghB5/download.jpg"
+    }
+  ]
+  
