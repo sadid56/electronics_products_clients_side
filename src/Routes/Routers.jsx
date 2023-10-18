@@ -6,6 +6,7 @@ import Registation from "../authantication/Registation";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import AddProduct from "../Private/AddProduct/AddProduct";
 import ProductPage from "../Private/ProductPage/ProductPage";
+import BrandSlider from "../shared/BrandSlider/BrandSlider";
 
 const Routers = createBrowserRouter([
     {
@@ -32,9 +33,15 @@ const Routers = createBrowserRouter([
             {
                 path: '/productPage/:id',
                 element: <ProductPage/>,
-                loader: ({params})=>fetch(`data.json/${params.id}`)
+                loader: ()=>fetch('/data.json')
 
-            }
+            },
+            // {
+            //     path: '/brandSlider/:id',
+            //     element: <BrandSlider/>,
+            //    loader: ()=>fetch('data.json')
+
+            // }
         ]
     }
 ])

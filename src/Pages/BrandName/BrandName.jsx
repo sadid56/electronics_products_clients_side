@@ -15,7 +15,7 @@ const BrandName = () => {
             <h3>{brandeNames?.length}</h3>
             <div className="grid grid-cols-3 gap-5">
                 {
-                    brandeNames.map(brandeName => <div onClick={()=>navigate(`/productPage/${brandeName._id}`)} className="card card-compact border-2 rounded-md">
+                    brandeNames.map(brandeName => <div onClick={()=>navigate(`/productPage/${brandeName.id}`)} className="card card-compact border-2 rounded-md">
                     <figure><img src={brandeName?.thumbnail} className="h-[300px] w-full rounded-md"/></figure>
                     <div className="card-body">
                       <h2 className="card-title text-4xl font-semibold">{brandeName?.brand_name}</h2>

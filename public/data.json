@@ -1,33 +1,122 @@
 [
-    {
+  {
       "id": 1,
       "brand_name": "Apple",
-      "thumbnail": "https://i.ibb.co/3mNnRNv/pexels-kartikey-das-413279.jpg"
-    },
-    {
+      "thumbnail": "https://i.ibb.co/3mNnRNv/pexels-kartikey-das-413279.jpg",
+      "brand_slider_image": [
+          "https://i.ibb.co/rwq2JHB/pexels-pixabay-38568.jpg",
+          "https://i.ibb.co/SXY2RYp/pexels-karolina-grabowska-5650052.jpg",
+          "https://i.ibb.co/PwZzzp7/pexels-alina-tomylko-12260089.jpg"
+      ],
+      "Brand_details": [
+          "Apple Inc. is an American multinational technology company that designs, manufactures, and markets consumer electronics, computer software, and online services.",
+          "Founded by Steve Jobs, Steve Wozniak, and Ronald Wayne in 1976.",
+          "Headquartered in Cupertino, California, USA."
+      ],
+      "Brand_offer": [
+          "Buy any Apple product and get a free one-year subscription to Apple TV+.",
+          "Purchase an iPhone and receive a $50 App Store gift card.",
+          "Trade in your old Mac for a discount on a new one."
+      ]
+  },
+  {
       "id": 2,
       "brand_name": "Samsung",
-      "thumbnail": "https://i.ibb.co/LtQGDyM/pexels-obi-onyeador-13080838.jpg"
-    },
-    {
+      "thumbnail": "https://i.ibb.co/LtQGDyM/pexels-obi-onyeador-13080838.jpg",
+      "brand_slider_image": [
+          "https://i.ibb.co/mHHRYS6/pexels-imad-clicks-11772518.jpg",
+          "https://i.ibb.co/RzyqNpy/Untitled.jpg",
+          "https://i.ibb.co/rZ0CmWf/images.jpg"
+      ],
+      "Brand_details": [
+          "Samsung Electronics Co., Ltd. is a South Korean multinational electronics company headquartered in Suwon.",
+          "Founded by Lee Byung-chul in 1938.",
+          "A leading manufacturer of a wide range of consumer and industrial electronic equipment."
+      ],
+      "Brand_offer": [
+          "Purchase a Samsung Galaxy phone and receive a $50 gift card for your next purchase.",
+          "Buy a Samsung QLED TV and get a free soundbar.",
+          "Trade in your old Samsung tablet for a discount on the latest model."
+      ]
+  },
+  {
       "id": 3,
       "brand_name": "Sony",
-      "thumbnail": "https://i.ibb.co/6Fv49T4/pexels-rodrigo-santos-8544693.jpg"
-    },
-    {
+      "thumbnail": "https://i.ibb.co/6Fv49T4/pexels-rodrigo-santos-8544693.jpg",
+      "brand_slider_image": [
+          "https://i.ibb.co/Bz396H4/pexels-sleepi-alleyne-790479.jpg",
+          "https://i.ibb.co/K7vsmQy/sonyTv.jpg",
+          "https://i.ibb.co/YjSn59F/pexels-abhishek-saini-2929411.jpg"
+      ],
+      "Brand_details": [
+          "Sony Corporation is a Japanese multinational conglomerate headquartered in Tokyo.",
+          "Founded by Masaru Ibuka and Akio Morita in 1946.",
+          "A leading manufacturer of audio, video, communications, and information technology products."
+      ],
+      "Brand_offer": [
+          "Buy a Sony PlayStation 5 and get a free game of your choice.",
+          "Purchase a Sony BRAVIA TV and receive a free sound system.",
+          "Trade in your old Sony camera for a discount on a new one."
+      ]
+  },
+  {
       "id": 4,
       "brand_name": "Google",
-      "thumbnail": "https://i.ibb.co/txPgt5z/pexels-pixabay-40185.jpg"
-    },
-    {
+      "thumbnail": "https://i.ibb.co/txPgt5z/pexels-pixabay-40185.jpg",
+      "brand_slider_image": [
+          "https://i.ibb.co/NZthRGn/pexels-ketut-subiyanto-4353618.jpg",
+          "https://i.ibb.co/tsywFjc/images.jpg",
+          "https://i.ibb.co/rbhH0g6/gfdsimages.jpg"
+      ],
+      "Brand_details": [
+          "Google LLC is an American multinational technology company specializing in Internet-related services and products.",
+          "Founded by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University in 1998.",
+          "Known for its online advertising technologies, search engine, cloud computing, and software."
+      ],
+      "Brand_offer": [
+          "Get 20% off on Google Nest smart home devices for a limited time.",
+          "Purchase a Pixel smartphone and receive a free Google One subscription.",
+          "Trade in your old Google Home speaker for a discount on the latest model."
+      ]
+  },
+  {
       "id": 5,
       "brand_name": "Intel",
-      "thumbnail": "https://i.ibb.co/56mRjBx/pexels-jordan-harrison-343239.jpg"
-    },
-    {
+      "thumbnail": "https://i.ibb.co/56mRjBx/pexels-jordan-harrison-343239.jpg",
+      "brand_slider_image": [
+          "https://i.ibb.co/tmVL1vq/pexels-pok-rie-1432673.jpg",
+          "https://i.ibb.co/TgnbwPX/himages.jpg",
+          "https://i.ibb.co/K7BQkb6/pexels-pixabay-40879.jpg"
+      ],
+      "Brand_details": [
+          "Intel Corporation is an American multinational corporation headquartered in Santa Clara, California.",
+          "Founded by Robert Noyce and Gordon Moore in 1968.",
+          "One of the world's largest semiconductor chip manufacturers."
+      ],
+      "Brand_offer": [
+          "Upgrade your PC with an Intel Core i9 processor and receive a free gaming bundle.",
+          "Buy an Intel-powered laptop and get a discount on Microsoft Office.",
+          "Trade in your old Intel CPU for a discount on the latest model."
+      ]
+  },
+  {
       "id": 6,
       "brand_name": "Microsoft",
-      "thumbnail": "https://i.ibb.co/J5vghB5/download.jpg"
-    }
-  ]
-  
+      "thumbnail": "https://i.ibb.co/J5vghB5/download.jpg",
+      "brand_slider_image": [
+          "https://i.ibb.co/tMHKX4J/mimages.jpg",
+          "https://i.ibb.co/brDGXbV/Untitled.jpg",
+          "https://i.ibb.co/RQ2dwkG/mmimages.jpg"
+      ],
+      "Brand_details": [
+          "Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington.",
+          "Founded by Bill Gates and Paul Allen in 1975.",
+          "Develops, manufactures, licenses, supports, and sells computer software, consumer electronics, and personal computers."
+      ],
+      "Brand_offer": [
+          "Purchase a Microsoft Surface Laptop and get a 15% discount on Microsoft Office 365.",
+          "Buy an Xbox Series X and receive a free game pass subscription.",
+          "Trade in your old Microsoft Surface device for a discount on a new one."
+      ]
+  }
+]
