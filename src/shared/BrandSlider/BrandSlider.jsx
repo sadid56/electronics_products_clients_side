@@ -76,3 +76,5 @@ const BrandSlider = () => {
 };
 
 export default BrandSlider;
+
+                  

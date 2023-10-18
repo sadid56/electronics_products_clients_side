@@ -87,6 +87,7 @@ const ProductPage = () => {
           </div>
         </div>
       </Slider>
+      
     </div>
   );
 };
