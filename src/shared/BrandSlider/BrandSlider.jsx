@@ -1,76 +1,76 @@
-import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
 
-const BrandSlider = () => {
-    const sliderData = useLoaderData();
-    const {id} = useParams()
-    const [slider, satSlider] = useState(null)
-    useEffect(()=>{
-        const slider = sliderData.map(slider => slider.id == parseInt(id));
-        satSlider(slider)
-    },[])
-    console.log(sliderData);
+import Slider from "react-slick";
+
+const BrandSlider = ({slider}) => {
+    
+    const settings = {
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 2000,
+      cssEase: "linear"
+    };
   return (
     <div>
-        <h2>{slider?.name}</h2>
-      <div className="carousel w-full">
-        <div id="slide1" className="carousel-item relative w-full">
-          <img
-            src="/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"
-            className="w-full"
-          />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide4" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide2" className="btn btn-circle">
-              ❯
-            </a>
+      <Slider {...settings}>
+        <div>
+          <div className="hero min-h-[80vh]">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+              <div className="flex-1">
+              <img
+                src={slider?.brand_slider_image[0]}
+                className="max-w-md rounded-lg h-[400px] w-full"
+              />
+              </div>
+              <div className="flex-1">
+                <h1 className="text-5xl font-bold">{slider?.Brand_offer[0]}</h1>
+                <p className="py-6 text-gray-400">
+                  {slider?.Brand_details[0]}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="slide2" className="carousel-item relative w-full">
-          <img
-            src="/images/stock/photo-1609621838510-5ad474b7d25d.jpg"
-            className="w-full"
-          />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide3" className="btn btn-circle">
-              ❯
-            </a>
+        <div>
+        <div className="hero min-h-[80vh]">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+              <div className="flex-1">
+              <img
+                src={slider?.brand_slider_image[1]}
+                className="max-w-md rounded-lg h-[400px] w-full"
+              />
+              </div>
+              <div className="flex-1">
+                <h1 className="text-5xl font-bold">{slider?.Brand_offer[1]}</h1>
+                <p className="py-6 text-gray-400">
+                  {slider?.Brand_details[1]}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="slide3" className="carousel-item relative w-full">
-          <img
-            src="/images/stock/photo-1414694762283-acccc27bca85.jpg"
-            className="w-full"
-          />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide4" className="btn btn-circle">
-              ❯
-            </a>
+        <div>
+        <div className="hero min-h-[80vh]">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+              <div className="flex-1">
+              <img
+                src={slider?.brand_slider_image[2]}
+                className="max-w-md rounded-lg h-[400px] w-full"
+              />
+              </div>
+              <div className="flex-1">
+                <h1 className="text-5xl font-bold">{slider?.Brand_offer[2]}</h1>
+                <p className="py-6 text-gray-400">
+                  {slider?.Brand_details[2]}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div id="slide4" className="carousel-item relative w-full">
-          <img
-            src="/images/stock/photo-1665553365602-b2fb8e5d1707.jpg"
-            className="w-full"
-          />
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide1" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-      </div>
+      </Slider>
     </div>
   );
 };
