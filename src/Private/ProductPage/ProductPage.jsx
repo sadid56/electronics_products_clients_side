@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useNavigate, useParams } from "react-router-dom";
 import BrandSlider from "../../shared/BrandSlider/BrandSlider";
 import { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
@@ -8,9 +8,11 @@ const ProductPage = () => {
   const sliderData = useLoaderData();
   const { id } = useParams();
   const int = parseInt(id);
+  const navigate = useNavigate()
   const [slider, setSlider] = useState(null);
   const [products, setProducts] = useState([])
   const [finalProduct, setFinalProduct] = useState([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const slider = sliderData?.find((slider) => slider.id === int);
@@ -21,27 +23,56 @@ const ProductPage = () => {
   useEffect(()=>{
     fetch('http://localhost:5000/products')
   .then(res => res.json())
-  .then(data => setProducts(data))
+  .then(data => {
+    setProducts(data)
+    setLoading(false)
+  })
+  .catch(error =>{
+    console.log('error',error);
+    setLoading(false)
+  })
+  
   },[])
 
 
-
     useEffect(()=>{
-          const filterProducts = products.filter(BrandName => BrandName?.brandName?.toLowerCase() === slider?.brand_name?.toLowerCase());
+          if(!loading && slider && products.length > 0){
+            const filterProducts = products.filter(BrandName => BrandName?.brandName?.toLowerCase() === slider?.brand_name?.toLowerCase());
           setFinalProduct(filterProducts)
-    },[])
+          }
+    },[slider, products, loading])
 
   return (
     <div>
        <BrandSlider slider={slider}></BrandSlider>
        {/* product container */}
-       <div>
+       {
+        loading ? <p>Loading...</p>
+        :
+        <div className="mt-10 grid grid-cols-2 gap-5">
          {
-          finalProduct.map(product => <div>
-            <p>{product?.name}</p>
-          </div>)
+          finalProduct.map(product => 
+            <div key={product._id} class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
+                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={product?.image}/>
+                <div class="flex flex-col justify-between p-4 leading-normal space-y-3">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{product?.name}</h5>
+                    <p class="text-2xl font-semibold text-gray-600 ">Brand Name: {product?.brandName}</p>
+                    <p className="text-xl font-semibold">CategorieName: {product?.categorieName}</p>
+                    <div className="flex items-center gap-4">
+                    <p className="text-gray-400 font-medium">Price: ${product?.price}</p>
+                    <p className="text-gray-400 font-medium">Rating: {product?.rating}</p>
+                    </div>
+                    <div className="flex items-center gap-3 mt-5">
+                    <button onClick={()=>navigate(`/productDetails/${product._id}`)} className="btn btn-outline">Details</button>
+                      <button onClick={()=>navigate(`/updateProduct/${product._id}`)} className="btn btn-outline"><i class="fa-solid fa-pen-nib"></i></button>
+                     
+                    </div>
+                </div>
+            </div>
+            )
          }
        </div>
+       }
     </div>
   );
 };

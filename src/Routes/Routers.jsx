@@ -7,6 +7,8 @@ import ErrorPage from "../ErrorPage/ErrorPage";
 import AddProduct from "../Private/AddProduct/AddProduct";
 import ProductPage from "../Private/ProductPage/ProductPage";
 import BrandSlider from "../shared/BrandSlider/BrandSlider";
+import ProductDetails from "../Private/ProductPage/ProductDetails";
+import UpdateProduct from "../Private/UpdateProduct/UpdateProduct";
 
 const Routers = createBrowserRouter([
     {
@@ -36,6 +38,17 @@ const Routers = createBrowserRouter([
                 loader: ()=>fetch('/data.json')
 
             },
+            {
+                path: '/productDetails/:id',
+                element: <ProductDetails></ProductDetails>,
+                loader: ({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+
+            },
+            {
+                path: '/updateProduct/:id',
+                element: <UpdateProduct></UpdateProduct>,
+                loader: ({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+            }
             // {
             //     path: '/brandSlider/:id',
             //     element: <BrandSlider/>,
