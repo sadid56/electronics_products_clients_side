@@ -1,18 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa6";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Registation = () => {
-    const {googleLogin, createUser, profileUpdate} = useContext(AuthContext)
+    const {googleLogin, createUser, profileUpdate} = useContext(AuthContext);
+    const navigate = useNavigate()
 
     const handleGoogleLogin = ()=>{
         googleLogin()
-        .then(res => {
-            console.log(res.user);
+        .then(() => {
+            toast.success('Google continue success !')
+            navigate('/')
         })
         .catch(error =>{
-            console.log(error.message);
+            toast.error(error.message);
         })
      }
 
@@ -22,21 +25,35 @@ const Registation = () => {
         const email = e.target.email.value;
         const photo = e.target.photo.value;
         const password = e.target.password.value;
-        console.log(name, photo,email, password);
+        // console.log(name, photo,email, password);
+
+        //! validation
+        if(password.length < 6){
+          return toast.error('password at lest 6 character')
+        }
+        // const regexCapital = /^[A-Z]+$/
+        // if(regexCapital.test(password)){
+        //   return alert('Please provide me a capital letter !')
+        // }
+        const regex = /(?=.*[A-Z])(?=.*[a-z])/
+        if(!regex.test(password)){
+          return toast.error('Please provide me a special character!')
+        }
+
 
         //! create user
         createUser(email, password)
-        .then(res => {
+        .then( () => {
             profileUpdate(name, photo)
-            .then(res => console.log(res.user))
+            .then()
             .catch(error => {
-                console.log(error.message);
+                toast.error(error.message);
             })
-            alert('create success')
-            console.log(res.user)
+            toast.success('create user success')
+            navigate('/')
         })
         .catch(error => {
-            console.log(error.message);
+            toast.error(error.message);
         })
     }
     return ( 
@@ -48,7 +65,7 @@ const Registation = () => {
            <img src="https://i.ibb.co/ZH8H8gw/undraw-Access-account-re-8spm.png" className="max-w-md" alt="" />
 
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card p-5 flex-shrink-0 w-full max-w-sm border rounded-md bg-base-100">
             <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">
                 <label className="label">
@@ -103,9 +120,9 @@ const Registation = () => {
                 <button type="submit" className="btn btn-primary">Registation </button>
               </div>
               <p>Already have an account? <Link to='/login' className="text-blue-600">login</Link></p>
+            </form>
               <div className="divider">OR</div>
               <button onClick={handleGoogleLogin} className="btn btn-outline font-semibold">Continue With Google <FaGoogle></FaGoogle> </button>
-            </form>
           </div>
         </div>
       </div>

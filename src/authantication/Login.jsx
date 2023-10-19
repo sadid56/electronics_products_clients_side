@@ -2,16 +2,17 @@ import { Link } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa6";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
     const {googleLogin, signIn} = useContext(AuthContext)
      const handleGoogleLogin = ()=>{
         googleLogin()
-        .then(res => {
-            console.log(res.user);
+        .then(() => {
+            toast.success('Google login success')
         })
         .catch(error =>{
-            console.log(error.message);
+            toast.error(error.message);
         })
      }
 
@@ -21,15 +22,13 @@ const Login = () => {
         e.preventDefault()
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password);
 
         signIn(email, password)
-        .then(res => {
-            console.log(res.user)
-            alert('sign in success')
+        .then(() => {
+            toast.success('Login success')
         })
         .catch(error =>{
-            console.log(error.message);
+            toast.error(error.message);
         })
     }
   return (
@@ -41,7 +40,7 @@ const Login = () => {
            <img src="https://i.ibb.co/mTycFpQ/undraw-Login-re-4vu2.png" className="max-w-md" alt="" />
 
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card p-4 flex-shrink-0 w-full max-w-sm border rounded-md bg-base-100">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -72,9 +71,9 @@ const Login = () => {
                 <button type="submit" className="btn btn-primary">Login</button>
               </div>
               <p>Don't have an account? <Link to='/registation' className="text-blue-600">Register</Link></p>
+            </form>
               <div className="divider">OR</div>
               <button onClick={handleGoogleLogin} className="btn btn-outline font-semibold">Continue With Google <FaGoogle></FaGoogle> </button>
-            </form>
           </div>
         </div>
       </div>

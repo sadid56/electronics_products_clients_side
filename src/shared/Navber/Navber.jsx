@@ -2,17 +2,18 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import userPng from '../../assets/user.png'
+import toast from "react-hot-toast";
 
 const Navber = () => {
     const {user, logOut} = useContext(AuthContext);
     
     const handleLogOut =()=>{
         logOut()
-        .then(res => {
-            console.log(res.user);
+        .then(() => {
+            toast.success('Log Out success')
         })
         .catch(error =>{
-            console.log(error.message);
+            toast.error(error.message);
         })
     }
 
