@@ -3,8 +3,29 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const loadedProduct = useLoaderData();
-  const { image, name, brandName, categorieName, price, rating, description } =
-    loadedProduct;
+  const { image, name, brandName, categorieName, price, rating} = loadedProduct;
+
+  const handleAddProduct = ()=>{
+    fetch('http://localhost:5000/myCart',{
+      method: 'post',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(loadedProduct)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      if(data.acknowledged === true){
+        alert('add success')
+      }
+    })
+    .catch(error => {
+      console.log('error', error);
+    })
+  }
+
+
   return (
     <div className="mt-10">
       <div className=" min-h-screen bg-base-200">
@@ -21,7 +42,7 @@ const ProductDetails = () => {
             <p className="text-2xl font-semibold text-gray-600">CategorieName: {categorieName}</p>
             <p className="font-medium text-gray-400">Price: ${price}</p>
             <p className="font-medium text-gray-400">Rating: {rating}</p>
-            <button className="btn btn-primary">Add to Cart</button>
+            <button onClick={handleAddProduct} className="btn btn-primary">Add to Cart</button>
           </div>
         </div>
       </div>
