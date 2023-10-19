@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "author_name": "John Doe",
+      "author_image": "https://i.ibb.co/3hM6zY3/download-2.jpg",
+      "description": "Excellent product! It exceeded my expectations. I would highly recommend it.",
+      "date": "2023-10-19"
+    },
+    {
+      "id": 2,
+      "author_name": "Jane Smith",
+      "author_image": "https://i.ibb.co/ZWbKK8q/download-3.jpg",
+      "description": "I've been using this product for a while, and it's been a game-changer for me. I love it!",
+      "date": "2023-10-18"
+    },
+    {
+      "id": 3,
+      "author_name": "Mike Johnson",
+      "author_image": "https://i.ibb.co/1ns01QY/images-1.jpg",
+      "description": "This is the best tech gadget I've ever purchased. The quality is top-notch.",
+      "date": "2023-10-17"
+    }
+  ]
+  

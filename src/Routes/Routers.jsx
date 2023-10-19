@@ -11,6 +11,7 @@ import ProductDetails from "../Private/ProductPage/ProductDetails";
 import UpdateProduct from "../Private/UpdateProduct/UpdateProduct";
 import MyCart from "../Private/My Cart/MyCart";
 import PrivateRout from "../Private/PrivateRoute/PrivateRoute";
+import CustomarRivew from "../Pages/CustomarRivew/CustomarRiew";
 
 const Routers = createBrowserRouter([
     {
@@ -55,13 +56,13 @@ const Routers = createBrowserRouter([
                 path: '/myCart',
                 element: <PrivateRout><MyCart></MyCart></PrivateRout>,
                 loader: ()=> fetch('http://localhost:5000/myCart')
+            },
+            {
+                path: 'customarRivew',
+                element: <CustomarRivew></CustomarRivew>,
+                
             }
-            // {
-            //     path: '/brandSlider/:id',
-            //     element: <BrandSlider/>,
-            //    loader: ()=>fetch('data.json')
-
-            // }
+            
         ]
     }
 ])

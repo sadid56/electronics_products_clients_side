@@ -1,11 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import userPng from '../../assets/user.png'
 import toast from "react-hot-toast";
 
 const Navber = () => {
-    const {user, logOut} = useContext(AuthContext);
+    const {user, logOut, toggleIsDark} = useContext(AuthContext);
+    
+
     
     const handleLogOut =()=>{
         logOut()
@@ -58,7 +60,9 @@ const Navber = () => {
       </div>
 
 
-      <div className="navbar-end">
+      <div className="navbar-end space-x-2">
+      {/* <button onClick={toggleIsDark}>Light</button> */}
+      <input onClick={toggleIsDark} type="checkbox" className="toggle" />
 
       {
         user ? <div className="dropdown dropdown-end">
