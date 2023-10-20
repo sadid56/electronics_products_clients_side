@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
   const loadedProduct = useLoaderData();
@@ -17,7 +18,12 @@ const ProductDetails = () => {
     .then(data => {
       console.log(data);
       if(data.acknowledged === true){
-        alert('add success')
+        Swal.fire({
+          title: 'Add to cart success',
+          text: 'You have added this cart',
+          icon: 'success',
+          confirmButtonText: 'ok'
+        })
       }
     })
     .catch(error => {

@@ -16,7 +16,7 @@ const CustomarRivew = () => {
       <h3 className="text-4xl font-bold text-center my-10">Best Reviews</h3>
       <div className="grid grid-cols-3 gap-5">
         {reviws.map((reviw) => (
-          <div className="card   shadow-xl">
+          <div className="card   border rounded-md p-3">
            <div className="flex items-center">
            <div className="avatar flex  flex-col">
               <div className="w-24 h-24 rounded-full">

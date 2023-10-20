@@ -53,7 +53,7 @@ const Navber = () => {
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <img src="https://i.ibb.co/db5dSr3/4592564313260032-removebg-preview.png" className="w-24" alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
@@ -73,7 +73,7 @@ const Navber = () => {
         </label>
         <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
          <li className="text-2xl font-semibold text-center">{user?.displayName && user?.displayName  }</li>
-          <li><button onClick={handleLogOut} className="btn">Log Out</button></li>
+          <li><button onClick={handleLogOut} className="btn mt-5">Log Out</button></li>
         </ul>
       </div> 
       :

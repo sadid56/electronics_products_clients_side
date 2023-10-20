@@ -49,13 +49,15 @@ const ProductPage = () => {
        {
         loading ? <p>Loading...</p>
         :
-        <div className="mt-10 grid grid-cols-2 gap-5">
+        <div>
+          <h2 className="text-4xl font-semibold text-center my-10">Our brand products</h2>
+          <div className="mt-10 grid grid-cols-2 gap-5">
          {
           finalProduct.map(product => 
-            <div key={product._id} class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl">
-                <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={product?.image}/>
+            <div key={product._id} class="flex flex-col items-center  border rounded-lg shadow md:flex-row md:max-w-xl">
+                <img class="object-cover w-full  h-96 md:h-auto md:w-48 rounded-md" src={product?.image}/>
                 <div class="flex flex-col justify-between p-4 leading-normal space-y-3">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">{product?.name}</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{product?.name}</h5>
                     <p class="text-2xl font-semibold text-gray-600 ">Brand Name: {product?.brandName}</p>
                     <p className="text-xl font-semibold">CategorieName: {product?.categorieName}</p>
                     <div className="flex items-center gap-4">
@@ -72,6 +74,7 @@ const ProductPage = () => {
             )
          }
        </div>
+        </div>
        }
     </div>
   );

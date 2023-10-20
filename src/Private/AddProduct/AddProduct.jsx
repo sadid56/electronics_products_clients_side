@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddProduct = () => {
     const handleAddProduct = e => {
         e.preventDefault()
@@ -22,7 +24,12 @@ const AddProduct = () => {
         .then(data => {
             console.log(data);
             if(data.acknowledged === true){
-                alert('add suces')
+              Swal.fire({
+                title: 'Product add success',
+                text: 'You have added this product',
+                icon: 'success',
+                confirmButtonText: 'ok'
+              })
             }
         })
     }

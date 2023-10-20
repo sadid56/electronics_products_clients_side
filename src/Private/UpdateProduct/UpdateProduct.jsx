@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateProduct = () => {
 
@@ -30,7 +31,12 @@ const UpdateProduct = () => {
         .then(data => {
             console.log(data);
             if(data.matchedCount === 1){
-                alert('update suces')
+              Swal.fire({
+                title: 'Update successfull',
+                // text: 'Do you want to continue',
+                icon: 'success',
+                confirmButtonText: 'ok'
+              })
             }
         })
     }
@@ -41,7 +47,7 @@ const UpdateProduct = () => {
           <div className="text-center ">
             <h1 className="text-5xl font-bold">Update Product</h1>
           </div>
-          <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 w-full  shadow-2xl border rounded-md">
             <form onSubmit={handleUpdateProducts} className="card-body">
               <div className="flex gap-5 items-start">
                 <div className="flex-1">
