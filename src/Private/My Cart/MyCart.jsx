@@ -48,7 +48,7 @@ const MyCart = () => {
     return ( 
         <div>
             <h2 className="text-center my-5 text-3xl font-semibold">My total cart: {Mycarts.length}</h2>
-            <div className="grid grid-cols-2 gap-5">
+            <div className="grid md:grid-cols-2 gap-5">
                 {
                     Mycarts.map(myCart => <div key={myCart._id} class="flex flex-col items-center border rounded-lg shadow md:flex-row gap-5 p-3">
                     <div className="flex-1 ">

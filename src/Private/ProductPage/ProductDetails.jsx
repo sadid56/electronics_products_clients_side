@@ -34,8 +34,8 @@ const ProductDetails = () => {
 
   return (
     <div className="mt-10">
-      <div className=" min-h-screen bg-base-200">
-        <div className=" flex items-center gap-10">
+      <div className=" min-h-screen">
+        <div className=" flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
           <img
             src={image}

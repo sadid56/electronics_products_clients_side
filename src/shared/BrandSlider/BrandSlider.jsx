@@ -9,15 +9,15 @@ const BrandSlider = ({slider}) => {
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 2000,
+      speed: 4000,
       autoplaySpeed: 2000,
       cssEase: "linear"
     };
   return (
-    <div>
+    <div className="overflow-y-hidden">
       <Slider {...settings}>
         <div>
-          <div className="hero min-h-[80vh]">
+          <div className="hero min-h-[80vh] ">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <div className="flex-1">
               <img
@@ -26,7 +26,7 @@ const BrandSlider = ({slider}) => {
               />
               </div>
               <div className="flex-1">
-                <h1 className="text-5xl font-bold">{slider?.Brand_offer[0]}</h1>
+                <h1 className="text-3xl md:text-5xl font-bold">{slider?.Brand_offer[0]}</h1>
                 <p className="py-6 text-gray-400">
                   {slider?.Brand_details[0]}
                 </p>
@@ -44,7 +44,7 @@ const BrandSlider = ({slider}) => {
               />
               </div>
               <div className="flex-1">
-                <h1 className="text-5xl font-bold">{slider?.Brand_offer[1]}</h1>
+                <h1 className="text-3xl md:text-5xl font-bold">{slider?.Brand_offer[1]}</h1>
                 <p className="py-6 text-gray-400">
                   {slider?.Brand_details[1]}
                 </p>
@@ -62,7 +62,7 @@ const BrandSlider = ({slider}) => {
               />
               </div>
               <div className="flex-1">
-                <h1 className="text-5xl font-bold">{slider?.Brand_offer[2]}</h1>
+                <h1 className="text-3xl md:text-5xl font-bold">{slider?.Brand_offer[2]}</h1>
                 <p className="py-6 text-gray-400">
                   {slider?.Brand_details[2]}
                 </p>

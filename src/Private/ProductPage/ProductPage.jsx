@@ -51,7 +51,7 @@ const ProductPage = () => {
         :
         <div>
           <h2 className="text-4xl font-semibold text-center my-10">Our brand products</h2>
-          <div className="mt-10 grid grid-cols-2 gap-5">
+          <div className="mt-10 grid md:grid-cols-2 gap-5">
          {
           finalProduct.map(product => 
             <div key={product._id} class="flex flex-col items-center  border rounded-lg shadow md:flex-row md:max-w-xl">

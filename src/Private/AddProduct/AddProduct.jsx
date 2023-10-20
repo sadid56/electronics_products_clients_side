@@ -35,14 +35,14 @@ const AddProduct = () => {
     }
   return (
     <div>
-      <div className="hero min-h-screen ">
-        <div className="hero-content flex-col">
+      <div className=" min-h-screen ">
+        <div className=" flex-col">
           <div className="text-center ">
-            <h1 className="text-5xl font-bold">Add Product</h1>
+            <h1 className="text-3xl md:text-5xl font-bold">Add Product</h1>
           </div>
-          <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 w-full  shadow-2xl ">
             <form onSubmit={handleAddProduct} className="card-body">
-              <div className="flex gap-5 items-start">
+              <div className="flex flex-col md:flex-row gap-5 items-start">
                 <div className="flex-1">
                   <div className="form-control">
                     <label className="label">
@@ -68,6 +68,18 @@ const AddProduct = () => {
                       name="name"
                     />
                   </div>
+                  <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Price</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Price"
+                    className="input input-bordered"
+                    required
+                    name="price"
+                  />
+                </div>
                 </div>
                 <div className="flex-1">
                   <div className="form-control">
@@ -94,22 +106,7 @@ const AddProduct = () => {
                       name="categorieName"
                     />
                   </div>
-                </div>
-              </div>
-              <div className="flex items-center w-full gap-5">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text">Price</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Price"
-                    className="input input-bordered"
-                    required
-                    name="price"
-                  />
-                </div>
-                <div className="form-control">
+                  <div className="form-control">
                   <label className="label">
                     <span className="label-text">Rating</span>
                   </label>
@@ -121,7 +118,12 @@ const AddProduct = () => {
                     name="rating"
                   />
                 </div>
+                </div>
               </div>
+              {/* <div className="flex items-center w-full gap-5">
+                
+               
+              </div> */}
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Description</span>
