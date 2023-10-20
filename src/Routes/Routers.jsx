@@ -44,18 +44,18 @@ const Routers = createBrowserRouter([
             {
                 path: '/productDetails/:id',
                 element: <PrivateRout><ProductDetails></ProductDetails></PrivateRout>,
-                loader: ({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({params})=>fetch(`https://assignment10-server-side-a53vmkns1-sadids-projects.vercel.app/products/${params.id}`)
 
             },
             {
                 path: '/updateProduct/:id',
                 element: <PrivateRout><UpdateProduct></UpdateProduct></PrivateRout>,
-                loader: ({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({params})=>fetch(`https://assignment10-server-side-a53vmkns1-sadids-projects.vercel.app/products/${params.id}`)
             },
             {
                 path: '/myCart',
                 element: <PrivateRout><MyCart></MyCart></PrivateRout>,
-                loader: ()=> fetch('http://localhost:5000/myCart')
+                loader: ()=> fetch('https://assignment10-server-side-a53vmkns1-sadids-projects.vercel.app/myCart')
             },
             {
                 path: 'customarRivew',

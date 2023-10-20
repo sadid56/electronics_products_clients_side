@@ -53,7 +53,7 @@ const Navber = () => {
             {navLinks}
           </ul>
         </div>
-        <img src="https://i.ibb.co/db5dSr3/4592564313260032-removebg-preview.png" className="w-24" alt="" />
+        <img src="https://i.ibb.co/db5dSr3/4592564313260032-removebg-preview.png" className="w-20 md:w-24" alt="" />
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>

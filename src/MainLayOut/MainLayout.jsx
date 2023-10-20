@@ -6,10 +6,10 @@ import { useContext } from "react";
 import AuthProvider, { AuthContext } from "../AuthProvider/AuthProvider";
 
 const MainLayOut = () => {
-    const {toggleIsDark, isDark} = useContext(AuthContext)
+    const {isDark} = useContext(AuthContext)
 //    console.log('toggle', toggleIsDark);
     return ( 
-        <div className={isDark ? '' : 'bg-black text-white'}>
+        <div className={isDark ? '' : 'bg-black text-white'} style={{padding:'0px 10px'}}>
             <Navber></Navber>
             <div className="max-w-6xl mx-auto">
             <Outlet/>

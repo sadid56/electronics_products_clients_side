@@ -62,7 +62,7 @@ const Registation = () => {
       <div className="hero  bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div>
-           <img src="https://i.ibb.co/ZH8H8gw/undraw-Access-account-re-8spm.png" className="max-w-md" alt="" />
+           <img src="https://i.ibb.co/ZH8H8gw/undraw-Access-account-re-8spm.png" className="md:max-w-md" alt="" />
 
           </div>
           <div className="card p-5 flex-shrink-0 w-full max-w-sm border rounded-md bg-base-100">
