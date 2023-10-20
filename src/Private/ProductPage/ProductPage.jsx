@@ -47,7 +47,7 @@ const ProductPage = () => {
        <BrandSlider slider={slider}></BrandSlider>
        {/* product container */}
        {
-        loading ? <p>Loading...</p>
+        loading ? <div className="flex justify-center my-10"><span className="loading loading-spinner text-error"></span></div>
         :
         <div>
           <h2 className="text-4xl font-semibold text-center my-10">Our brand products</h2>

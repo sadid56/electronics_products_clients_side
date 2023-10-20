@@ -7,7 +7,7 @@ const ProductDetails = () => {
   const { image, name, brandName, categorieName, price, rating} = loadedProduct;
 
   const handleAddProduct = ()=>{
-    fetch('http://localhost:5000/myCart',{
+    fetch('https://assignment10-server-side-a53vmkns1-sadids-projects.vercel.app/myCart',{
       method: 'post',
       headers: {
         'content-type': 'application/json'

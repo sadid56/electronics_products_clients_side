@@ -7,7 +7,7 @@ const PrivateRout = ({children}) => {
     const location = useLocation()
 
     if(loading){
-        return <p>Loading...</p>
+        return <div className="flex items-center justify-center h-[80vh]"><span className="loading loading-bars loading-lg"></span></div>
     }
     if(user){
         return children;

@@ -13,7 +13,7 @@ const AddProduct = () => {
         const description = form.description.value;
         const addProduct = { image, name, brandName, categorieName, price, rating, description}
         console.log(addProduct); 
-        fetch('http://localhost:5000/products',{
+        fetch('https://assignment10-server-side-a53vmkns1-sadids-projects.vercel.app/products',{
             method:'post',
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +42,7 @@ const AddProduct = () => {
           </div>
           <div className="card flex-shrink-0 w-full  shadow-2xl ">
             <form onSubmit={handleAddProduct} className="card-body">
-              <div className="flex flex-col md:flex-row gap-5 items-start">
+              <div className="flex flex-col md:flex-row gap-5 md:items-start">
                 <div className="flex-1">
                   <div className="form-control">
                     <label className="label">
