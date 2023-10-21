@@ -21,7 +21,7 @@ const ProductPage = () => {
 
   //! get product from database
   useEffect(()=>{
-    fetch('https://assignment10-server-side-a53vmkns1-sadids-projects.vercel.app/products')
+    fetch('https://assignment10-server-side-6pflikpeg-sadids-projects.vercel.app/products')
   .then(res => res.json())
   .then(data => {
     setProducts(data)

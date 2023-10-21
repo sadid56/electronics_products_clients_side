@@ -12,7 +12,7 @@ const MyCart = () => {
 
   const handleDelete = (id) => {
     fetch(
-      `https://assignment10-server-side-a53vmkns1-sadids-projects.vercel.app/myCart/${id}`,
+      `https://assignment10-server-side-6pflikpeg-sadids-projects.vercel.app/myCart/${id}`,
       {
         method: "delete",
       }

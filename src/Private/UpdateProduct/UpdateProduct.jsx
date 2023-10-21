@@ -20,7 +20,7 @@ const UpdateProduct = () => {
         const rating = form.rating.value;
         const updateProduct = { image, name, brandName, categorieName, price, rating}
         console.log(updateProduct); 
-        fetch(`https://assignment10-server-side-a53vmkns1-sadids-projects.vercel.app/products/${_id}`,{
+        fetch(`https://assignment10-server-side-6pflikpeg-sadids-projects.vercel.app/products/${_id}`,{
             method:'put',
             headers: {
                 'content-type': 'application/json'

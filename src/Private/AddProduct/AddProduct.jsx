@@ -13,7 +13,7 @@ const AddProduct = () => {
         const description = form.description.value;
         const addProduct = { image, name, brandName, categorieName, price, rating, description}
         console.log(addProduct); 
-        fetch('https://assignment10-server-side-a53vmkns1-sadids-projects.vercel.app/products',{
+        fetch('https://assignment10-server-side-6pflikpeg-sadids-projects.vercel.app/products',{
             method:'post',
             headers: {
                 'content-type': 'application/json'
