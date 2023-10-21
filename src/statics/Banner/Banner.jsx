@@ -1,6 +1,6 @@
 const Banner = () => {
   return (
-    <div className="bg-[#176B87] ">
+    <div className="bg-[#176B87] py-10">
       <div className="hero max-w-6xl mx-auto">
         <div className="hero-content flex-col items-center lg:flex-row-reverse">
          <div className="flex-1">
@@ -14,7 +14,7 @@ const Banner = () => {
             <p className="py-6 text-gray-400">
               Our all product is a brand new and trusted seller, any product a similler price and best services in bangladesh.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button className="btn normal-case border-none text-white text-xl bg-gradient-to-r from-purple-500 to-pink-500">Get Started</button>
           </div>
         </div>
       </div>
