@@ -72,7 +72,7 @@ const Login = () => {
               </div>
 
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">Login</button>
+                <button type="submit" className="btn normal-case border-none text-white text-xl bg-gradient-to-r from-purple-500 to-pink-500">Login</button>
               </div>
               <p>Don't have an account? <Link to='/registation' className="text-blue-600">Register</Link></p>
             </form>

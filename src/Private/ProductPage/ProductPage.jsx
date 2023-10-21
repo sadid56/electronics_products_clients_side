@@ -65,7 +65,7 @@ const ProductPage = () => {
                     <p className="text-gray-400 font-medium">Rating: {product?.rating}</p>
                     </div>
                     <div className="flex items-center gap-3 mt-5">
-                    <button onClick={()=>navigate(`/productDetails/${product._id}`)} className="btn btn-outline">Details</button>
+                    <button onClick={()=>navigate(`/productDetails/${product._id}`)} className="btn btn-outline ">Details</button>
                       <button onClick={()=>navigate(`/updateProduct/${product._id}`)} className="btn btn-outline"><i class="fa-solid fa-pen-nib"></i></button>
                      
                     </div>

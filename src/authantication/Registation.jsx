@@ -117,7 +117,7 @@ const Registation = () => {
               </div>
 
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">Registation </button>
+                <button type="submit" className="btn normal-case border-none text-white text-xl bg-gradient-to-r from-purple-500 to-pink-500">Registation </button>
               </div>
               <p>Already have an account? <Link to='/login' className="text-blue-600">login</Link></p>
             </form>

@@ -1,0 +1,8 @@
+#nav a.active{
+    background-color: transparent;
+    color: red;
+}
+#nav a{
+    font-size: 18px;
+    font-weight: 500;
+}

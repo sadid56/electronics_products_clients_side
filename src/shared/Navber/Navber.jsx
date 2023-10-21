@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import userPng from '../../assets/user.png'
 import toast from "react-hot-toast";
+import './navber.css'
 
 const Navber = () => {
     const {user, logOut, toggleIsDark} = useContext(AuthContext);
@@ -29,7 +30,7 @@ const Navber = () => {
     </>
   );
   return (
-    <div className="navbar sticky top-0 z-20 " style={{backdropFilter:"blur(10px)"}}>
+    <div id="nav" className="navbar sticky top-0 z-20" style={{backdropFilter:"blur(10px)"}}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -77,7 +78,7 @@ const Navber = () => {
         </ul>
       </div> 
       :
-      <Link to='/login'><button className="btn btn-primary">Login</button></Link>
+      <Link to='/login'><button className="btn normal-case border-none text-white text-xl bg-gradient-to-r from-purple-500 to-pink-500">Login</button></Link>
       }
 
   </div>

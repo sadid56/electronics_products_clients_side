@@ -33,8 +33,8 @@ const ProductDetails = () => {
 
 
   return (
-    <div className="mt-10">
-      <div className=" min-h-screen">
+    <div className="mt-10  bg-[#176B87] p-10">
+      <div className="max-w-6xl mx-auto">
         <div className=" flex flex-col md:flex-row items-center gap-10">
           <div className="flex-1">
           <img
@@ -43,12 +43,12 @@ const ProductDetails = () => {
           />
           </div>
           <div className="flex-1 space-y-4 p-10">
-            <h1 className="text-5xl font-bold">{name}</h1>
-            <p className="text-3xl font-bold">Brane Name: {brandName}</p>
-            <p className="text-2xl font-semibold text-gray-600">CategorieName: {categorieName}</p>
-            <p className="font-medium text-gray-400">Price: ${price}</p>
-            <p className="font-medium text-gray-400">Rating: {rating}</p>
-            <button onClick={handleAddProduct} className="btn btn-primary">Add to Cart</button>
+            <h1 className="text-5xl font-bold text-white">{name}</h1>
+            <p className="text-3xl font-bold text-[#132043]">Brane Name: {brandName}</p>
+            <p className="text-2xl font-semibold text-[#132043]">CategorieName: {categorieName}</p>
+            <p className="font-medium text-gray-300">Price: ${price}</p>
+            <p className="font-medium text-gray-300">Rating: {rating}</p>
+            <button onClick={handleAddProduct} className="btn normal-case border-none text-white text-xl bg-gradient-to-r from-purple-500 to-pink-500">Add to Cart</button>
           </div>
         </div>
       </div>
