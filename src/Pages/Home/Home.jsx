@@ -7,9 +7,11 @@ const Home = () => {
     return (  
         <div>
            <Banner/>
+           <div className="max-w-6xl mx-auto">
            <BrandName/>
            <CustomarRivew/>
            <Contact></Contact>
+           </div>
         </div>
      );
 }

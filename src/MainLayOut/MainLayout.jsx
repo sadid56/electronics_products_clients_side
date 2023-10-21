@@ -11,9 +11,7 @@ const MainLayOut = () => {
     return ( 
         <div className={isDark ? '' : 'bg-black text-white'} style={{padding:'0px 10px'}}>
             <Navber></Navber>
-            <div className="max-w-6xl mx-auto">
             <Outlet/>
-            </div>
             <Footer/>
             <Toaster></Toaster>
         </div>

@@ -34,7 +34,7 @@ const AddProduct = () => {
         })
     }
   return (
-    <div>
+    <div className="max-w-5xl mx-auto">
       <div className=" min-h-screen ">
         <div className=" flex-col">
           <div className="text-center ">

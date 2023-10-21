@@ -49,7 +49,7 @@ const ProductPage = () => {
        {
         loading ? <div className="flex justify-center my-10"><span className="loading loading-spinner text-error"></span></div>
         :
-        <div>
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-semibold text-center my-10">Our brand products</h2>
           <div className="mt-10 grid md:grid-cols-2 gap-5">
          {

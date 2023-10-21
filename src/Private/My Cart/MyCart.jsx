@@ -36,14 +36,14 @@ const MyCart = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       <h2 className="text-center my-5 text-3xl font-semibold">
         My total cart: {Mycarts.length}
       </h2>
       <div className="grid md:grid-cols-2 gap-5">
-        {Mycarts.map((myCart) => (
+        {Mycarts?.map((myCart) => (
           <div
-            key={myCart._id}
+            key={myCart?._id}
             class="flex flex-col items-center border rounded-lg shadow md:flex-row gap-5 p-3">
             <div className="flex-1 ">
               <img
@@ -57,7 +57,7 @@ const MyCart = () => {
                   <i class="fa-solid fa-trash text-xl text-red-400"></i>
                 </button>
               </div>
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight">
                 {myCart?.name}
               </h5>
               <p class="text-2xl font-semibold text-gray-600 ">
