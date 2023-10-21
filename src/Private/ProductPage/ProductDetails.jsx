@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const ProductDetails = () => {
   const loadedProduct = useLoaderData();
-  const { image, name, brandName, categorieName, price, rating} = loadedProduct;
+  const { image, name, brandName, categorieName, price, rating, description} = loadedProduct;
 
   const handleAddProduct = ()=>{
     fetch('https://assignment10-server-side-6pflikpeg-sadids-projects.vercel.app/myCart',{
@@ -46,6 +46,7 @@ const ProductDetails = () => {
             <h1 className="text-5xl font-bold text-white">{name}</h1>
             <p className="text-3xl font-bold text-[#132043]">Brane Name: {brandName}</p>
             <p className="text-2xl font-semibold text-[#132043]">CategorieName: {categorieName}</p>
+            <p className="font-medium text-gray-300">{description}</p>
             <p className="font-medium text-gray-300">Price: ${price}</p>
             <p className="font-medium text-gray-300">Rating: {rating}</p>
             <button onClick={handleAddProduct} className="btn normal-case border-none text-white text-xl bg-gradient-to-r from-purple-500 to-pink-500">Add to Cart</button>

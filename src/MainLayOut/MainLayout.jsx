@@ -9,9 +9,11 @@ const MainLayOut = () => {
     const {isDark} = useContext(AuthContext)
 //    console.log('toggle', toggleIsDark);
     return ( 
-        <div className={isDark ? '' : 'bg-black text-white'} style={{padding:'0px 10px'}}>
+        <div className={isDark ? '' : 'bg-black text-white'} style={{padding:'0px 10px', maxWidth: '1300px', margin: '0px auto'}}>
             <Navber></Navber>
+            <div className="min-h-screen">
             <Outlet/>
+            </div>
             <Footer/>
             <Toaster></Toaster>
         </div>
