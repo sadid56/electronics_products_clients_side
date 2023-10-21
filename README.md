@@ -1,3 +1,6 @@
+## My project name
+- Electricity and technology > Brand Shop
+
 ## 5 future in my project
 - I have create a brand new Technology and Electronics product website 
 - My brand product name apple, sumsung, sony, google, intel and microsoft
