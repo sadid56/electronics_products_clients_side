@@ -8,5 +8,8 @@
 - User show product details , add to card this product but befor user login
 - user delete the my products cart.
 
+## technologies
+- react, mongodb, expressjs, firebase
+
 ## website live link
  # https://assignment-10-ac88b.firebaseapp.com/
